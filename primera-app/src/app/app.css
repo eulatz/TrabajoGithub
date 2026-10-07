@@ -1,0 +1,24 @@
+#divCentro {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1%;
+}
+
+#banner {
+    color: limegreen;
+}
+
+#menu {
+    margin-right: 2%;
+    color: lightskyblue;
+}
+#body {
+    color: lightgreen;
+}
+
+
+
+#footer {
+    color: lightcoral;
+}
+

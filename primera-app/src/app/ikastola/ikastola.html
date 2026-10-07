@@ -1,0 +1,19 @@
+<div class="card">
+    <img [src]="avatarUrl()" [alt]="materia()" class="avatar">
+    <h2>{{ materia() }}</h2>
+
+    <p class="rol">{{ profesor() }}</p>
+    <p> El aula en el que {{profesor()}} da las clases de {{materia()}} es el: {{ aula() }}</p>
+    <p> {{profesor()}} da clases a  {{numAlumnos()}} alumnos</p>
+
+    <p class="estado">
+        Estado:
+        <span [class.disponible]="enLinea" [class.ocupado]="!enLinea">
+            {{ enLinea ? 'Disponible' : 'En Clase' }}
+        </span>
+    </p>
+
+    <button (click)="cambiarEstado()">
+        Cambiar a {{ enLinea ? 'En Clase' : 'Disponible' }}
+    </button>
+</div>
