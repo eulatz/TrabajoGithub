@@ -8,12 +8,12 @@
 
     <p class="estado">
         Estado:
-        <span [class.disponible]="enLinea" [class.ocupado]="!enLinea">
-            {{ enLinea ? 'Disponible' : 'En Clase' }}
+        <span [class.disponible]="enLinea()" [class.ocupado]="!enLinea()">
+            {{ enLinea() ? 'Disponible' : 'En Clase' }}
         </span>
     </p>
 
     <button (click)="cambiarEstado()">
-        Cambiar a {{ enLinea ? 'En Clase' : 'Disponible' }}
+        Cambiar a {{ enLinea() ? 'En Clase' : 'Disponible' }}
     </button>
 </div>

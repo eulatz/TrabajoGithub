@@ -1,4 +1,4 @@
-import { Component,input } from '@angular/core';
+import { Component,input, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -14,10 +14,15 @@ export class Ikastola {
   aula = input.required<String>();
   numAlumnos = input.required<String>();
 
-  enLinea = true;
+  enLinea = signal(true);
 
   cambiarEstado() {
-    this.enLinea = !this.enLinea;
+    this.enLinea.update(estadoActual => !estadoActual);
+     
   }
 
 }
+
+
+
+
